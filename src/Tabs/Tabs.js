@@ -1,16 +1,24 @@
 import React from "react";
+import { useState } from "react";
 import PatientList from '../PatientList/PatientList';
 import StudyList from '../StudyList/StudyList';
-import './Tabs.module.css';
+import './Tabs.css';
+
 
 
 
 
 export default function Tabs(props) {
+    const [stat, setStat] = useState(1);
+
+    const updateToggle = (id) => {
+       setStat(id);
+    }
+
     return <div>
-        <button>Study Manager</button>
-        <button>Patients</button>
-        <PatientList />
-        <StudyList />
+        <button onClick={() => updateToggle(1)}>Study Manager</button>
+        <button onClick={() => updateToggle(2)}>Patients</button>
+        <PatientList status={stat === 2 ? 'active' : ''}/>
+        <StudyList status={stat === 1 ? 'active' : ''}/>
     </div>
 }

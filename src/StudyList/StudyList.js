@@ -1,6 +1,7 @@
 import React from "react";
-import './StudyList.module.css';
+import './StudyList.css';
 
-export default function StudyList() {
-    return <div>StudyList</div>
-}
+export default function StudyList({status}) {
+    return <div className={status}>Study List</div>
+
+} 
