@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import styles from "./AddPatient.module.css";
+import "./AddPatient.css";
 
-export default function AddPatient() {
+export default function AddPatient({status, hide}) {
     const [name, setName] = useState('');
     const [surName, setSurName] = useState('');
     const [pesel, setPesel] = useState('');
@@ -47,8 +47,8 @@ export default function AddPatient() {
         setSex('Male');
     }
 
-    return <div className={styles.form}>
-        <div className={styles.inputWrapper}>
+    return <div className="form">
+        <div className="inputWrapper">
             <div>
                 <label>Name:</label>
                 <input type="text" value={name} onChange={nameChangeHandler} minLength="2" required/>
@@ -73,6 +73,9 @@ export default function AddPatient() {
                 </select>
             </div>
         </div>
-        <button onClick={onSubmit} type="submit">Add Patient</button>
+        <div className="addCancelButtons">
+            <button onClick={onSubmit} type="submit">Add Patient</button>
+            <button onClick={hide}>Cancel</button>
+        </div>
     </div>
 }

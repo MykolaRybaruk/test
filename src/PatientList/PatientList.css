@@ -3,5 +3,10 @@
 }
 
 .patients {
-    margin-top: 100px;
+    height: 100vh;
+}
+
+.patient-Adding-Closing__Buttons {
+    width: 100%;
+    display: flex;
 }
