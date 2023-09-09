@@ -44,7 +44,7 @@ export default function PatientList({status}) {
 
     return <ol className={status}>
               <div className="patients">
-                <PatientFilter />
+                <PatientFilter active={addPatientHandler}/>
                 {addPatient && <AddPatient status={'active'} hide={closeAddingFormHandler}/>}
                 {patients.map(el => <li>
                     <div>{el.name}</div>

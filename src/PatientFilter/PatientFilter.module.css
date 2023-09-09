@@ -1,0 +1,9 @@
+.patientsFilter {
+    padding-top: 10px;
+    margin-left: 10px;
+    display: flex;
+}
+
+.addNew {
+    margin-left: 20px;
+}
