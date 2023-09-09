@@ -17,8 +17,8 @@ export default function Tabs(props) {
 
     return <div>
         <div className="buttons">
-            <button className="studyManagerTab" onClick={() => updateToggle(1)}>Study Manager</button>
-            <button className="patientsTab" onClick={() => updateToggle(2)}>Patients</button>
+            <button className={stat === 1 ? "studyManagerTabActive": "studyManagerTab"} onClick={() => updateToggle(1)}>Study Manager</button>
+            <button className={stat === 2 ? "patientsTabActive": "patientsTab"} onClick={() => updateToggle(2)}>Patients</button>
         </div>
 
         <PatientList status={stat === 1 ? 'inactive' : ''}/>
