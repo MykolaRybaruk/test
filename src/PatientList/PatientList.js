@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./PatientList.module.css";
+import AddPatient from "../AddPatient/AddPatient";
+import "./PatientList.css";
 
 const patients = [
     {
@@ -28,8 +29,9 @@ const patients = [
     }
   ];
 
-export default function PatientList(props) {
-    return <ol className={styles.patients}>
+export default function PatientList({status}) {
+    return <ol className={status}>
+        <AddPatient />
         {patients.map(el => <li>
             <div>{el.name}</div>
             <div>{el.surname}</div>
