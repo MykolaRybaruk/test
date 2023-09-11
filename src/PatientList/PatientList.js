@@ -45,6 +45,7 @@ export default function PatientList({status}) {
 
     const patientAdding = (patient) => {
       setPatientList([patient, ...patients]);
+      console.log("15-08-2023" > "13-08-2023");
     }
 
 
