@@ -1,0 +1,12 @@
+.inactive {
+    display: none;
+}
+
+.patients {
+    height: 100vh;
+}
+
+.patient-Adding-Closing__Buttons {
+    width: 100%;
+    display: flex;
+}

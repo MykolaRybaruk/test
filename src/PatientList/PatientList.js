@@ -1,5 +1,7 @@
-import React from "react";
-import styles from "./PatientList.module.css";
+import React, {useState} from "react";
+import AddPatient from "../AddPatient/AddPatient";
+import PatientFilter from "../PatientFilter/PatientFilter";
+import "./PatientList.css";
 
 const patients = [
     {
@@ -28,14 +30,29 @@ const patients = [
     }
   ];
 
-export default function PatientList(props) {
-    return <ol className={styles.patients}>
-        {patients.map(el => <li>
-            <div>{el.name}</div>
-            <div>{el.surname}</div>
-            <div>{el.id}</div>
-            <div>{el.sex}</div>
-            <div>{el.birthdate}</div>
-        </li>)}
-    </ol>
+
+export default function PatientList({status}) {
+    const [addPatient, setAddPatient] = useState(true);
+
+    const addPatientHandler = () => {
+      setAddPatient(true);
+    }
+
+    const closeAddingFormHandler = () => {
+      setAddPatient(false);
+    }
+
+    return <ol className={status}>
+              <div className="patients">
+                <PatientFilter active={addPatientHandler}/>
+                {addPatient && <AddPatient status={'active'} hide={closeAddingFormHandler}/>}
+                {patients.map(el => <li>
+                    <div>{el.name}</div>
+                    <div>{el.surname}</div>
+                    <div>{el.id}</div>
+                    <div>{el.sex}</div>
+                    <div>{el.birthdate}</div>
+                </li>)}
+              </div>
+            </ol>
 }

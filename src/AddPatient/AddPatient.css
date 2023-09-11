@@ -1,0 +1,17 @@
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputWrapper {
+    margin-top: 20px;
+    display: flex;
+}
+
+.addCancelButtons {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

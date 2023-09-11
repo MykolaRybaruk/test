@@ -1,3 +1,7 @@
-.active {
-    color: red;
+.inactive {
+    display: none;
+}
+
+.studiesWrapper {
+    height: 100vh;
 }
