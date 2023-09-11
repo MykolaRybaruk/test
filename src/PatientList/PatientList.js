@@ -21,7 +21,7 @@ const patients = [
       checked: false,
     },
     {
-      name: 'Andrzej',
+      name: 'Filip',
       surname: 'Testerer',
       id: '26891564791',
       birthdate: '2001-12-22',
@@ -32,21 +32,27 @@ const patients = [
 
 
 export default function PatientList({status}) {
-    const [addPatient, setAddPatient] = useState(true);
+    const [addPatientButton, setAddPatientButton] = useState(false);
+    const [patientList, setPatientList] = useState(patients);
 
     const addPatientHandler = () => {
-      setAddPatient(true);
+      setAddPatientButton(true);
     }
 
     const closeAddingFormHandler = () => {
-      setAddPatient(false);
+      setAddPatientButton(false);
     }
+
+    const patientAdding = (patient) => {
+      setPatientList([patient, ...patients]);
+    }
+
 
     return <ol className={status}>
               <div className="patients">
                 <PatientFilter active={addPatientHandler}/>
-                {addPatient && <AddPatient status={'active'} hide={closeAddingFormHandler}/>}
-                {patients.map(el => <li>
+                {addPatientButton && <AddPatient patientAdding={patientAdding} status={'active'} hide={closeAddingFormHandler}/>}
+                {patientList.map(el => <li key={el.name}>
                     <div>{el.name}</div>
                     <div>{el.surname}</div>
                     <div>{el.id}</div>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./AddPatient.css";
 
-export default function AddPatient({status, hide}) {
+export default function AddPatient({status, hide, patientAdding}) {
     const [name, setName] = useState('');
     const [surName, setSurName] = useState('');
     const [pesel, setPesel] = useState('');
@@ -39,7 +39,7 @@ export default function AddPatient({status, hide}) {
             sex: sex,
             checked: false,
         }
-        console.log(patient);
+        patientAdding(patient);
         setName('');
         setSurName('');
         setPesel('');
