@@ -16,9 +16,9 @@ export default function Tabs(props) {
     }
 
     return <div>
-        <button onClick={() => updateToggle(1)}>Study Manager</button>
-        <button onClick={() => updateToggle(2)}>Patients</button>
-        <PatientList status={stat === 2 ? 'active' : ''}/>
-        <StudyList status={stat === 1 ? 'active' : ''}/>
+        <button className={styles.studyManager} onClick={() => updateToggle(1)}>Study Manager</button>
+        <button className={styles.patients}onClick={() => updateToggle(2)}>Patients</button>
+        <PatientList status={stat === 2 ? 'hidden' : ''}/>
+        <StudyList status={stat === 1 ? 'hidden' : ''}/>
     </div>
 }
