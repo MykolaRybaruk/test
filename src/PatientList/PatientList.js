@@ -52,7 +52,7 @@ export default function PatientList({status}) {
               <div className="patients">
                 <PatientFilter active={addPatientHandler}/>
                 {addPatientButton && <AddPatient patientAdding={patientAdding} status={'active'} hide={closeAddingFormHandler}/>}
-                {patientList.map(el => <li key={el.name}>
+                {patientList.map(el => <li key={el.id}>
                     <div>{el.name}</div>
                     <div>{el.surname}</div>
                     <div>{el.id}</div>
