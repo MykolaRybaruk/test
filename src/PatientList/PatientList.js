@@ -48,18 +48,21 @@ export default function PatientList({status}) {
       console.log("15-08-2023" > "13-08-2023");
     }
 
-
     return <ol className={status}>
               <div className="patients">
                 <PatientFilter active={addPatientHandler}/>
                 {addPatientButton && <AddPatient patientAdding={patientAdding} status={'active'} hide={closeAddingFormHandler}/>}
-                {patientList.map(el => <li key={el.id}>
-                    <div>{el.name}</div>
-                    <div>{el.surname}</div>
-                    <div>{el.id}</div>
-                    <div>{el.sex}</div>
-                    <div>{el.birthdate}</div>
-                </li>)}
+                <div className="patientsArea">
+                  {patientList.map(el => <li key={el.id} className="patientField" style={{backgroundColor: patientList.indexOf(el) / 2 === 0 ? "red" : "green"}}>
+                      <div>{el.name}</div>
+                      <div>{el.surname}</div>
+                      <div>{el.id}</div>
+                      <div>{el.sex}</div>
+                      <div>{el.birthdate}</div>
+                      <div>context</div>
+                      {console.log(patientList.indexOf(el) / 2 > 0)}
+                  </li>)}
+                </div>
               </div>
             </ol>
 }
