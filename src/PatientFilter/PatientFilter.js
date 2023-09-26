@@ -20,5 +20,7 @@ export default function PatientFilter({active}) {
 
         <button type="button">Search</button>
         <button type="button" onClick={active} className={styles.addNew}>Add New Patient</button>
+        <button type="button">Create New Order</button>
+        <button type="button">Add New Patient and Create Order</button>
     </div>
 }

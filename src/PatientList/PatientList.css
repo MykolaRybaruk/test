@@ -31,3 +31,9 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+.more {
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+}
