@@ -49,9 +49,14 @@ export default function PatientList({status}) {
       console.log("15-08-2023" > "13-08-2023");
     }
 
+    const orderCreatorHeightHandler = (height) => {
+      console.log(height);
+      return 500;
+    }
+
     return <ol className={status}>
               <div className="patients">
-                <PatientFilter active={addPatientHandler}/>
+                <PatientFilter newOrderActivator={() => orderCreatorHeightHandler()} active={addPatientHandler}/>
                 {addPatientButton && <AddPatient patientAdding={patientAdding} status={'active'} hide={closeAddingFormHandler}/>}
                 <div className="patientsArea">
                   {patientList.map(el => <li key={el.id} className="patientField" style={{background: patientList.indexOf(el) % 2 === 0 ? 'red' : 'green'}}>
@@ -64,7 +69,7 @@ export default function PatientList({status}) {
                       <div className="more">...</div>
                   </li>)}
                 </div>
-                <OrderCreator />
+                <OrderCreator height={orderCreatorHeightHandler()}/>
               </div>
             </ol>
 }

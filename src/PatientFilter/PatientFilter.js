@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styles from "./PatientFilter.module.css";
 
-export default function PatientFilter({active}) {
+export default function PatientFilter({active, newOrderActivator}) {
     return <div className={styles.patientsFilter}>
         <div>
             <label>Filter: </label>
@@ -20,7 +20,7 @@ export default function PatientFilter({active}) {
 
         <button type="button">Search</button>
         <button type="button" onClick={active} className={styles.addNew}>Add New Patient</button>
-        <button type="button">Create New Order</button>
+        <button type="button" onClick={newOrderActivator}>Create New Order</button>
         <button type="button">Add New Patient and Create Order</button>
     </div>
 }
