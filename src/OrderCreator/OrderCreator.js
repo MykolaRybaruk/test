@@ -1,10 +1,10 @@
 import React from "react";
 
 export default function OrderCreator(props) {
-    let addr = '../img/model2.jpg';
     return (
         <div className="orderCreatorWrapper">
-            <img src={addr} alt="model2" />
+            <p>OrderCreator</p>
+            <img className="image" style={{height: "500px"}} src="../../img/model2.jpg" alt=""/>
         </div>
     )
 }
