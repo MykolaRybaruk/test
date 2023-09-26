@@ -5,5 +5,4 @@ export default function StudyList({status}) {
     return <div className={status}>
             <div className="studiesWrapper">Study List</div>
         </div>
-
 } 
