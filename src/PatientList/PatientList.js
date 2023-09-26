@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import AddPatient from "../AddPatient/AddPatient";
 import PatientFilter from "../PatientFilter/PatientFilter";
 import "./PatientList.css";
+import OrderCreator from "../OrderCreator/OrderCreator";
 
 const patients = [
     {
@@ -63,6 +64,7 @@ export default function PatientList({status}) {
                       <div className="more">...</div>
                   </li>)}
                 </div>
+                <OrderCreator />
               </div>
             </ol>
 }
