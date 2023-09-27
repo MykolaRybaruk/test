@@ -1,0 +1,10 @@
+.orderCreatorWrapper {
+    display: flex;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    justify-content: center;
+}
+
+.image {
+    height: 100%;
+}
