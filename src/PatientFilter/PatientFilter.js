@@ -12,7 +12,7 @@ export default function PatientFilter({active, orderCreatorOpener}) {
 
         <button type="button">Search</button>
         <button type="button" onClick={active} className={styles.addNew}>Add New Patient</button>
-        <button type="button" onClick={() => orderCreatorOpener(500)}>Create New Order</button>
+        <button type="button" onClick={() => orderCreatorOpener("flex")}>Create Emergency Order</button>
         <button type="button">Add New Patient and Create The Order</button>
     </div>
 }

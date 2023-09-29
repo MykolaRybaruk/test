@@ -35,7 +35,7 @@ const patients = [
 export default function PatientList({status}) {
     const [addPatientButton, setAddPatientButton] = useState(false);
     const [patientList, setPatientList] = useState(patients);
-    const [orderCreatorHeight, setOrderCreatorHeight] = useState(0);
+    const [orderCreatorHeight, setOrderCreatorHeight] = useState("none");
     const addPatientHandler = () => {
       setAddPatientButton(true);
     }
@@ -50,15 +50,15 @@ export default function PatientList({status}) {
     }
 
   
-    const orderCreatorOpener = (height) => {
-      setOrderCreatorHeight(height);
+    const orderCreatorOpener = (display) => {
+      setOrderCreatorHeight(display);
     };
 
     return <ol className={status}>
               <div className="patients">
                 <PatientFilter active={addPatientHandler} orderCreatorOpener={orderCreatorOpener}/>
                 {addPatientButton && <AddPatient patientAdding={patientAdding} status={'active'} hide={closeAddingFormHandler}/>}
-                <OrderCreator height={orderCreatorHeight} orderCreatorOpener={orderCreatorOpener}/>
+                <OrderCreator display={orderCreatorHeight} orderCreatorOpener={orderCreatorOpener}/>
                 <div className="patientsArea">
                   {patientList.map(el => <li key={el.id} className="patientField" style={{background: patientList.indexOf(el) % 2 === 0 ? 'red' : 'green'}}>
                       <div>{el.name}</div>
