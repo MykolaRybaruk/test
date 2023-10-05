@@ -118,6 +118,7 @@ export default function OrderCreator({display, orderCreatorOpener}) {
                     <p className={styles.bodyPartName}>Longbone</p>
                 </div>
             </div>
+            <button>Create Order</button>
         </div>
     )
 }
