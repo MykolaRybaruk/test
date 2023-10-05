@@ -12,9 +12,30 @@ export default function OrderCreator({display, orderCreatorOpener}) {
                     <div className={`${styles.round} ${styles.round}`}></div>
                     <p className={styles.bodyPartName}>Head</p>
                 </div>
+
                 <div className={styles.wholeBody}>
                     <div className={`${styles.round} ${styles.round}`}></div>
                     <p className={styles.bodyPartName}>Whole body</p>
+                </div>
+                
+                <div className={styles.neck}>
+                    <div className={`${styles.round} ${styles.round}`}></div>
+                    <p className={styles.bodyPartName}>Neck</p>
+                </div>
+
+                <div className={styles.shoulder}>
+                    <div className={`${styles.round} ${styles.round}`}></div>
+                    <p className={styles.bodyPartName}>Shoulder</p>
+                </div>
+
+                <div className={styles.chest}>
+                    <div className={`${styles.round} ${styles.round}`}></div>
+                    <p className={styles.bodyPartName}>Shoulder</p>
+                </div>
+
+                <div className={styles.spineT}>
+                    <div className={`${styles.round} ${styles.round}`}></div>
+                    <p className={styles.bodyPartName}>Spine-T</p>
                 </div>
             </div>
         </div>
