@@ -5,20 +5,20 @@ export default function OrderCreator({display, orderCreatorOpener}) {
 
     return (
         <div className={styles.orderCreatorWrapper} style={{display: `${display}`}}>
-            <div className={styles.searchBox}>
-                <label>
-                    <div>Choose the patient</div>
-                    <input type="search" />
-                </label>
-            </div>
-            <button className={styles.closeButton} onClick={() => orderCreatorOpener("none")}>Close</button>
+            <button className={styles.closeButton} onClick={() => orderCreatorOpener("none")}>{'<-- Return'}</button>
             <div className={styles.orderCreator}>
                 <img className={styles.image} src="../../img/model2.jpg" alt=""/>
-                <div className={styles.round1}></div>
+                <div className={styles.head}>
+                    <div className={`${styles.round} ${styles.round}`}></div>
+                    <p className={styles.bodyPartName}>Head</p>
+                </div>
+                <div className={styles.wholeBody}>
+                    <div className={`${styles.round} ${styles.round}`}></div>
+                    <p className={styles.bodyPartName}>Whole body</p>
+                </div>
             </div>
         </div>
     )
 }
 
-//style={{height: `${height}px`}}
-// <button className={styles.closeButton} onClick={() => orderCreatorOpener(0)}>Close</button>
+//style={{display: `${display}`}}
