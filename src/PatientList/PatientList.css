@@ -15,7 +15,8 @@
     margin-top: 5px;
     width: 98%;
     height: 30px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: space-around;
     color: #fff;
@@ -26,7 +27,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
     width: 100%;
     background-color: #000000;
 
@@ -34,8 +34,9 @@
 
 .patientField {
     color: #fff;
-    display: flex;
-    width: 98%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 99.8%;
     height:50px;
     align-items: center;
     justify-content: space-around;
