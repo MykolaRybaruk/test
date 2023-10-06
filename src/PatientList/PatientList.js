@@ -29,6 +29,30 @@ const patients = [
       sex: 'female',
       checked: false,
     }
+    , {
+      name: 'Janek',
+      surname: 'Testerer',
+      id: '26452564791',
+      birthdate: '2012-11-02',
+      sex: 'male',
+      checked: false,
+    },
+     {
+      name: 'Rafał',
+      surname: 'Pankoswki',
+      id: '26891457841',
+      birthdate: '1992-04-17',
+      sex: 'male',
+      checked: false,
+    },
+    {
+      name: 'Lina',
+      surname: 'Miłoska',
+      id: '568984457841',
+      birthdate: '1998-06-23',
+      sex: 'female',
+      checked: false,
+    }
   ];
 
 
@@ -59,14 +83,16 @@ export default function PatientList({status}) {
                 <PatientFilter active={addPatientHandler} orderCreatorOpener={orderCreatorOpener}/>
                 {addPatientButton && <AddPatient patientAdding={patientAdding} status={'active'} hide={closeAddingFormHandler}/>}
                 <OrderCreator display={orderCreatorHeight} orderCreatorOpener={orderCreatorOpener}/>
-                <div className="tableStructure">
-                  <div>Name</div>
-                  <div>Surname</div>
-                  <div>PESEL</div>
-                  <div>Sex</div>
-                  <div>BirthDate</div>
-                  <div>Last Study Date</div>
-                  <div>More options</div>
+                <div className="tableStructureWrapper">
+                  <div className="tableStructure">
+                    <div>Name</div>
+                    <div>Surname</div>
+                    <div>PESEL</div>
+                    <div>Sex</div>
+                    <div>BirthDate</div>
+                    <div>Last Study Date</div>
+                    <div>More options</div>
+                  </div>
                 </div>
                 <div className="patientsArea">
                   {patientList.map(el => <li key={el.id} className="patientField" style={{background: patientList.indexOf(el) % 2 === 0 ? '#523634' : 'green'}}>
@@ -75,8 +101,10 @@ export default function PatientList({status}) {
                       <div>{el.id}</div>
                       <div>{el.sex}</div>
                       <div>{el.birthdate}</div>
-                      <div>context</div>
-                      <div className="more">...</div>
+                      <div>N/A</div>
+                      <div>
+                        <button className="more">...more</button>
+                      </div>
                   </li>)}
                 </div>
               </div>
