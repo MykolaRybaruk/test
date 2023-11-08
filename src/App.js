@@ -1,8 +1,8 @@
-import React from 'react';
-import Header from './Header/Header';
-import Tabs from './Tabs/Tabs';
-import Footer from './Footer/Footer';
-import './App.css';
+import React from "react";
+import Header from "./Header/Header";
+import Tabs from "./Tabs/Tabs";
+import Footer from "./Footer/Footer";
+import "./App.css";
 
 export default function App() {
   return (
@@ -13,3 +13,5 @@ export default function App() {
     </div>
   );
 }
+
+//vercel
